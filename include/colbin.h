@@ -9,7 +9,7 @@
 
 using u32   = uint32_t;
 using u8    = uint8_t;
-struct Vec3f { float x; float y; float z; };
+struct Vec2f { float x; float y; };
 
 namespace Colbin {
     struct Header {
@@ -22,8 +22,9 @@ namespace Colbin {
     static_assert(sizeof(Colbin::Header) == 0x10, "size of Colbin::Header must be 0x10");
 
     struct Entry {
-        Vec3f start;
-        Vec3f end;
+        Vec2f point1;
+        Vec2f point2;
+        Vec2f point3;
         u32 index;
         u32 collisionTypeIndex;
     };
@@ -41,7 +42,3 @@ namespace Colbin {
 }
 
 #pragma pack(pop)
-
-namespace ColbinEditor {
-    void printColbinData(std::string input);
-}
