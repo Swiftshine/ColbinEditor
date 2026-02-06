@@ -1,6 +1,9 @@
 # ColbinEditor
 An editor/viewer for <em>Kirby's Epic Yarn</em>'s `.colbin` files.
 
+## Note
+This repository is archived. See [Quilt](https://github.com/Swiftshine/Quilt) instead.
+
 ## Usage
 `colbineditor <usage> <filename>`
 
